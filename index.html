@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,14 +13,16 @@
     nav ul li { margin-left: 20px; }
     nav ul li a { color: #fff; text-decoration: none; }
     .container { max-width: 960px; margin: 20px auto; padding: 0 20px; }
-    .profile { display: flex; flex-wrap: wrap; gap: 20px; }
-    .profile img { border-radius: 8px; max-width: 200px; height: auto; }
+    .profile { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; }
+    .profile-pic-block { text-align: center; }
+    .profile-pic-block img { border-radius: 50%; width: 200px; height: 200px; object-fit: cover; display: block; margin: 0 auto; }
+    .social-links { display: flex; justify-content: center; margin-top: 10px; }
+    .social-links a { margin: 0 8px; text-decoration: none; color: #0066cc; font-size: 0.9rem; }
     .profile-info { flex: 1; }
     section { margin-bottom: 40px; }
     h2 { color: #b30000; margin-bottom: 10px; }
     ul.news { padding-left: 20px; }
     ul.news li { margin-bottom: 8px; }
-    a { color: #0066cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -40,7 +43,14 @@
 
   <div class="container">
     <section id="home" class="profile">
-      <img src="profile_pic_v2.jpg" alt="Shanto Rahman">
+      <div class="profile-pic-block">
+        <img src="profile_pic_v2.jpg" alt="Shanto Rahman">
+        <div class="social-links">
+          <a href="https://github.com/shanto-rahman" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/shanto-/" target="_blank">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=e0SzHPMAAAAJ&hl=en" target="_blank">Scholar</a>
+        </div>
+      </div>
       <div class="profile-info">
         <p><strong>Address:</strong> EER building, Cockrell School of Engineering, University of Texas at Austin</p>
         <p><strong>Email:</strong> shanto[DOT]rahman[at]utexas[DOT]edu</p>
@@ -79,3 +89,4 @@
   </div>
 </body>
 </html>
+
