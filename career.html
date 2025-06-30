@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Career | Shanto Rahman</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .career-list { list-style: none; padding: 0; }
+    .career-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+    .career-logo { width: 60px; height: auto; margin-right: 15px; flex-shrink: 0; }
+    .career-details { flex: 1; }
+    .career-details strong { display: block; }
+    .career-details em { font-style: italic; color: #555; }
+  </style>
 </head>
 <body>
   <header>
@@ -24,44 +32,61 @@
   <div class="container">
     <section id="career">
       <h2>Career</h2>
-      <ul>
-        <li>
-          <strong>Graduate Research Assistant</strong>, Software Engineering & Systems Track<br>
-          Department of Electrical & Computer Engineering, University of Texas at Austin<br>
-          <em>August 2021 – Present</em>
+      <ul class="career-list">
+        <li class="career-item">
+          <img class="career-logo" src="ut-austin-logo.png" alt="UT Austin Logo">
+          <div class="career-details">
+            <strong>Graduate Research Assistant, Software Engineering & Systems Track</strong>
+            Department of Electrical & Computer Engineering, University of Texas at Austin<br>
+            <em>August 2021 &ndash; Present</em>
+          </div>
         </li>
-        <li>
-          <strong>Research Intern</strong>, Google<br>
-          Software Testing and Flaky Test in Google System<br>
-          <em>May 2025 – Aug. 2025</em>
+        <li class="career-item">
+          <img class="career-logo" src="google-logo.png" alt="Google Logo">
+          <div class="career-details">
+            <strong>Research Intern, Google</strong>
+            Software Testing and Flaky Test in Google System<br>
+            <em>May 2025 &ndash; Aug. 2025</em>
+          </div>
         </li>
-        <li>
-          <strong>Applied Scientist Intern</strong>, AWS AI Labs - Code Whisperer Team<br>
-          Worked on change aware unit test repair<br>
-          <em>May 2024 – Aug. 2024</em><br>
-          Mentor: Baishakhi Ray and Pranav Garg
+        <li class="career-item">
+          <img class="career-logo" src="aws-logo.png" alt="AWS Logo">
+          <div class="career-details">
+            <strong>Applied Scientist Intern, AWS AI Labs - Code Whisperer Team</strong>
+            Worked on change aware unit test repair<br>
+            <em>May 2024 &ndash; Aug. 2024</em><br>
+            Mentor: Baishakhi Ray and Pranav Garg
+          </div>
         </li>
-        <li>
-          <strong>Lecturer</strong>, Department of Information and Communication Technology (ICT)<br>
-          Bangladesh University of Professionals (BUP)<br>
-          Teaching: Distributed Systems, Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Software Engineering<br>
-          <em>Sept. 2017 – Jan. 2021</em>
+        <li class="career-item">
+          <img class="career-logo" src="bup-logo.png" alt="BUP Logo">
+          <div class="career-details">
+            <strong>Lecturer, Department of Information and Communication Technology (ICT)</strong>
+            Bangladesh University of Professionals (BUP)<br>
+            Teaching: Distributed Systems, Data Structures & Algorithms, Operating Systems, Artificial Intelligence, Software Engineering<br>
+            <em>Sept. 2017 &ndash; Jan. 2021</em>
+          </div>
         </li>
-        <li>
-          <strong>Senior Software Engineer</strong>, Advance Solution Group, Samsung Research, Bangladesh Ltd.<br>
-          Worked on fingerprint authentication in Marshmallow and developed Torch for Tizen<br>
-          Technologies: Java, Android, PHP, MySQL, MAP API, Google API, Tizen<br>
-          <em>July 2016 – July 2017</em>
+        <li class="career-item">
+          <img class="career-logo" src="samsung-logo.png" alt="Samsung Research Logo">
+          <div class="career-details">
+            <strong>Senior Software Engineer, Advance Solution Group, Samsung Research, Bangladesh Ltd.</strong>
+            Worked on fingerprint authentication in Marshmallow and developed Torch for Tizen<br>
+            Technologies: Java, Android, PHP, MySQL, MAP API, Google API, Tizen<br>
+            <em>July 2016 &ndash; July 2017</em>
+          </div>
         </li>
-        <li>
-          <strong>Software Engineer (Intern)</strong>, Orion Informatics Ltd.<br>
-          Web development for BBE (new-generation CRA Wiz software for Bank of America)<br>
-          Technologies: ASP.NET, SQL Server, AJAX, JavaScript, Entity Framework<br>
-          <em>Jan. 2014 – June 2014</em>
+        <li class="career-item">
+          <img class="career-logo" src="orion-logo.png" alt="Orion Informatics Logo">
+          <div class="career-details">
+            <strong>Software Engineer (Intern), Orion Informatics Ltd.</strong>
+            Web development for BBE (new-generation CRA Wiz software for Bank of America)<br>
+            Technologies: ASP.NET, SQL Server, AJAX, JavaScript, Entity Framework<br>
+            <em>Jan. 2014 &ndash; June 2014</em>
+          </div>
         </li>
       </ul>
     </section>
   </div>
 </body>
 </html>
-
