@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .education-list { list-style: none; padding: 0; }
-    .education-item { margin-bottom: 30px; }
-    .education-item strong { display: block; font-size: 1.1rem; margin-bottom: 5px; }
-    .education-item em { font-style: italic; color: #555; display: block; margin-top: 3px; }
-    .education-item p { margin: 4px 0; }
+    .education-item { display: flex; align-items: flex-start; margin-bottom: 30px; }
+    .education-logo { width: 60px; height: auto; margin-right: 15px; flex-shrink: 0; }
+    .education-details strong { display: block; font-size: 1.1rem; margin-bottom: 5px; }
+    .education-details p { margin: 4px 0; }
+    .education-details em { font-style: italic; color: #555; display: block; margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -33,29 +34,39 @@
       <h2>Education</h2>
       <ul class="education-list">
         <li class="education-item">
-          <strong>Ph.D. in Software Engineering &amp; Systems</strong>
-          <p>Department of Electrical and Computer Engineering, University of Texas at Austin, USA</p>
-          <p>Research Interest: Software Engineering</p>
-          <p>Start Date: Fall 2021</p>
-          <p>Advisor: August Shi</p>
+          <img class="education-logo" src="images/ut-austin-logo.png" alt="UT Austin Logo">
+          <div class="education-details">
+            <strong>Ph.D. in Software Engineering &amp; Systems</strong>
+            <p>Department of Electrical and Computer Engineering, University of Texas at Austin, USA</p>
+            <p>Research Interest: Software Engineering</p>
+            <p>Start Date: Fall 2021</p>
+            <p>Advisor: August Shi</p>
+          </div>
         </li>
         <li class="education-item">
-          <strong>Master of Science in Software Engineering</strong>
-          <p>Institute of Information Technology, University of Dhaka, Bangladesh</p>
-          <p>Thesis: A Statement Level Bug Localization Technique</p>
-          <p>CGPA: 3.98 &ndash; Class Position: 2nd</p>
-          <p>Advisor: Kazi Muheymin-Us-Sakib</p>
+          <img class="education-logo" src="images/du-logo.png" alt="University of Dhaka Logo">
+          <div class="education-details">
+            <strong>Master of Science in Software Engineering</strong>
+            <p>Institute of Information Technology, University of Dhaka, Bangladesh</p>
+            <p>Thesis: A Statement Level Bug Localization Technique</p>
+            <p>CGPA: 3.98 &ndash; Class Position: 2nd</p>
+            <p>Advisor: Kazi Muheymin-Us-Sakib</p>
+          </div>
         </li>
         <li class="education-item">
-          <strong>Bachelor of Science in Software Engineering</strong>
-          <p>Institute of Information Technology, University of Dhaka, Bangladesh</p>
-          <p>Project: A Gamma Correction Based Algorithm to Enhance the Quality of Image</p>
-          <p>CGPA: 3.87 &ndash; Class Position: 2nd</p>
-          <p>Advisor: Mohammad Shoyaib</p>
+          <img class="education-logo" src="images/du-logo.png" alt="University of Dhaka Logo">
+          <div class="education-details">
+            <strong>Bachelor of Science in Software Engineering</strong>
+            <p>Institute of Information Technology, University of Dhaka, Bangladesh</p>
+            <p>Project: A Gamma Correction Based Algorithm to Enhance the Quality of Image</p>
+            <p>CGPA: 3.87 &ndash; Class Position: 2nd</p>
+            <p>Advisor: Mohammad Shoyaib</p>
+          </div>
         </li>
       </ul>
     </section>
   </div>
 </body>
 </html>
+
 
