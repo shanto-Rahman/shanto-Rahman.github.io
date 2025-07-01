@@ -9,25 +9,34 @@ body {
 }
 
 header {
-  background: #BF5700; #ut-austin color
+  background: #BF5700; /* ut-austin color */
   color: #fff;
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Keeps h1 and nav at opposite ends on desktop */
+  flex-wrap: wrap; /* NEW: Allows header items (h1 and nav) to wrap if space is tight */
 }
 
 header h1 {
   margin: 0;
   font-size: 1.5rem;
-  color: #fff; /* <--- ADD THIS LINE */
+  color: #fff; /* Ensures h1 is white */
+}
+
+/* --- Navigation Styles (Desktop First) --- */
+nav {
+  /* No specific styles needed for 'nav' on desktop other than what its children (ul) dictate */
+  /* This ensures it participates in the flex layout of the header */
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  display: flex; /* Makes the list items horizontal by default on desktop */
+  flex-wrap: wrap; /* NEW: Allows individual nav items to wrap if horizontal space is limited */
+  justify-content: flex-end; /* NEW: Aligns nav items to the right within their space */
 }
 
 nav ul li {
@@ -37,7 +46,59 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 5px 0; /* Add some vertical padding for links */
+  display: block; /* Make links fill their list item space */
 }
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Mobile-Specific Styles (Media Query) --- */
+@media (max-width: 768px) { /* NEW BLOCK: These styles apply only on screens 768px wide or smaller */
+
+  header {
+    flex-direction: column; /* NEW: Stacks h1 and nav vertically on mobile */
+    align-items: flex-start; /* NEW: Aligns items to the left when stacked */
+    padding: 10px; /* Adjust padding for mobile header if desired */
+  }
+
+  header h1 {
+    margin-bottom: 10px; /* NEW: Adds space below the title when stacked on mobile */
+    text-align: center; /* NEW: Center the h1 if you want, or remove for left align */
+    width: 100%; /* NEW: Make h1 take full width on mobile for centering */
+  }
+
+  nav {
+    width: 100%; /* NEW: Nav takes full width on mobile */
+    margin-top: 10px; /* NEW: Add some space above the nav links */
+  }
+
+  nav ul {
+    flex-direction: column; /* NEW: Stacks the nav links (list items) vertically on mobile */
+    align-items: center; /* NEW: Centers the nav links horizontally when stacked */
+    width: 100%; /* NEW: Make the ul take full width */
+    padding: 0; /* NEW: Remove any default ul padding */
+  }
+
+  nav ul li {
+    margin-left: 0; /* NEW: Remove horizontal margin */
+    width: 100%; /* NEW: Make each list item take full width */
+    text-align: center; /* NEW: Center the text within each list item */
+    padding: 12px 0; /* NEW: Add more vertical padding for better touch targets */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* NEW: Optional: Add a subtle separator between links */
+  }
+
+  nav ul li:last-child {
+    border-bottom: none; /* NEW: No border for the last item in the list */
+  }
+
+  nav ul li a {
+    padding: 0; /* NEW: Reset padding on the link itself, as the li has padding */
+  }
+}
+
+/* --- Rest of your existing styles --- */
 
 .container {
   max-width: 960px;
@@ -100,8 +161,3 @@ ul.news {
 ul.news li {
   margin-bottom: 8px;
 }
-
-a:hover {
-  text-decoration: underline;
-}
-
