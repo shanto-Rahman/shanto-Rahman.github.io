@@ -1,19 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initMenuToggle() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
 
-    if (menuToggle && nav) { // Ensure elements exist before adding event listener
+    if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active'); // This class will control visibility in CSS
-            menuToggle.classList.toggle('active'); // Optional: change icon (e.g., to 'X')
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
-
-        // Optional: Close menu when a link is clicked (for single-page navigation)
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
                 menuToggle.classList.remove('active');
             });
         });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Only call initMenuToggle if header is already present (e.g., not dynamically loaded)
+    if (document.querySelector('.menu-toggle') && document.querySelector('nav')) {
+        initMenuToggle();
     }
 });
