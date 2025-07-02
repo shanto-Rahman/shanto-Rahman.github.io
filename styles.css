@@ -208,3 +208,11 @@ ul.news li {
   margin: 0 auto;
 }
 
+/* Career section styles moved from career.html */
+.career-list { list-style: none; padding: 0; }
+.career-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+.career-logo { width: 60px; height: auto; margin-right: 15px; flex-shrink: 0; }
+.career-details { flex: 1; }
+.career-details strong { display: block; }
+.career-details em { font-style: italic; color: #555; }
+
