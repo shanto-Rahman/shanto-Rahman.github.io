@@ -8,21 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i> </button>
-        <h1>Shanto Rahman</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="others.html">Others</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    <script>
+      // Load header.html into the placeholder
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
 
     <div class="container">
         <section id="home" class="profile">

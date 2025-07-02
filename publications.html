@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Shanto Rahman</title>
+    <!--<title>Publications | Shanto Rahman</title> -->
     <link rel="stylesheet" href="styles.css">
     </head>
 <body>
-    <header>
-        <h1>Shanto Rahman</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="career.html">Career</a></li>
-                <li><a href="awards.html">Awards</a></li>
-                <li><a href="others.html">Others</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+    </script>
 
     <div class="container">
         <section id="conference-publications">
