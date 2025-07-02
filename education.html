@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education | Shanto Rahman</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    .education-list { list-style: none; padding: 0; }
-    .education-item { display: flex; align-items: flex-start; margin-bottom: 30px; }
-    .education-logo { width: 60px; height: auto; margin-right: 15px; flex-shrink: 0; }
-    .education-details strong { display: block; font-size: 1.1rem; margin-bottom: 5px; }
-    .education-details p { margin: 4px 0; }
-    .education-details em { font-style: italic; color: #555; display: block; margin-top: 5px; }
-  </style>
-</head>
-<body>
-  <header>
-    <button class="menu-toggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i> </button>
-    <h1>Shanto Rahman</h1>
-    <nav>
-      <ul>
+  <head>
+    <!-- 1) Viewport meta (so your @media queries actually kick in) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 2) Your CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 3) Font-Awesome (so the <i class="fas fa-bars"> actually renders something) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    >
+  </head>
+  <body>
+    <header>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1>Shanto Rahman</h1>
+      <!-- ... -->
+      <nav>
+       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="education.html">Education</a></li>
@@ -29,10 +29,10 @@
         <li><a href="awards.html">Awards</a></li>
         <li><a href="others.html">Others</a></li>
       </ul>
-    </nav>
-  </header>
-
-  <div class="container">
+      </nav>
+    </header>
+    
+    <div class="container">
     <section id="education">
       <h2>Education</h2>
       <ul class="education-list">
@@ -69,8 +69,9 @@
       </ul>
     </section>
   </div>
-  <script src="script.js"></script>
-</body>
-</html>
 
+    <!-- 5) Your JS at the end of the body -->
+    <script src="script.js"></script>
+  </body>
+</html>
 
