@@ -227,3 +227,19 @@ ul.news li {
 .others-website-list a { color: #0066cc; text-decoration: none; }
 .others-website-list a:hover { text-decoration: underline; }
 
+.education-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.education-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.education-details {
+  flex: 1;
+}
+
