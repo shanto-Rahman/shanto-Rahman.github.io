@@ -80,6 +80,14 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+nav ul li a.active {
+  background: #fff;
+  color: #BF5700 !important;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 5px 14px;
+}
+
 
 /* --- Mobile-Specific Styles (Media Query) --- */
 @media (max-width: 768px) { /* These styles apply only on screens 768px wide or smaller */
