@@ -216,3 +216,12 @@ ul.news li {
 .career-details strong { display: block; }
 .career-details em { font-style: italic; color: #555; }
 
+/* Others section styles moved from others.html */
+.others-section { margin-bottom: 40px; }
+.others-section h2 { color: #b30000; margin-bottom: 10px; }
+.others-section ul { list-style: disc inside; padding-left: 0; }
+.others-section ul li { margin-bottom: 8px; }
+.others-website-list li { margin-bottom: 15px; }
+.others-website-list a { color: #0066cc; text-decoration: none; }
+.others-website-list a:hover { text-decoration: underline; }
+
