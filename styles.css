@@ -202,8 +202,8 @@ ul.news li {
 }
 
 .education-logo {
-  width: 80px;         /* whatever uniform width you want */
-  height: 80px;        /* same for height */
+  width: 110px;         /* whatever uniform width you want */
+  height: 110px;        /* same for height */
   object-fit: contain; /* or cover, depending on whether you want letter-boxing or cropping */
   /* optional centering */
   display: block;
@@ -234,10 +234,14 @@ ul.news li {
   margin-bottom: 40px;
 }
 .education-logo {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   flex-shrink: 0;
+}
+.education-entry .education-logo[src*="ut-austin-logo-round.png"] {
+  width: 140px;
+  height: 140px;
 }
 .education-details {
   flex: 1;
