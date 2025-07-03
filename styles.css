@@ -14,19 +14,19 @@ header {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Keeps h1 and nav at opposite ends on desktop */
+  justify-content: flex-start; /* Align items to the left */
   position: relative; /* Needed for positioning the absolute nav on mobile */
   z-index: 1000; /* Ensures header is on top of other content */
 }
 
 /* Specific styling for the H1 in the header */
 header h1 {
-  margin: 0;
-  font-size: 1.5rem;
+  margin: 0 0 0 60px; /* Add left margin to align with profile image */
+  font-size: 2rem;
   color: #fff;
   /* Flex-grow to push nav to the right on desktop if it's there */
-  flex-grow: 1;
-  text-align: center; /* Center the title, then adjust later for mobile if needed */
+  flex-grow: 0;
+  text-align: left; /* Align name to left on mobile */
 }
 
 /* --- Hamburger Menu Toggle Button (Desktop: Hidden, Mobile: Visible) --- */
@@ -86,9 +86,7 @@ nav ul li a:hover {
   }
 
   header h1 {
-    flex-grow: 0; /* Don't grow on mobile as much */
-    text-align: left; /* Align name to left on mobile */
-    margin-left: 20px; /* Space between toggle and name */
+    margin-left: 20px; /* Less margin on mobile */
   }
 
   .menu-toggle {
