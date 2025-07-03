@@ -29,6 +29,10 @@ header h1 {
   text-align: left; /* Align name to left on mobile */
 }
 
+nav {
+  margin-left: auto; /* Push nav to the right */
+}
+
 /* --- Hamburger Menu Toggle Button (Desktop: Hidden, Mobile: Visible) --- */
 .menu-toggle {
   background: none;
