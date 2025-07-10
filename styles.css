@@ -261,3 +261,12 @@ ul.news li {
   flex: 1;
 }
 
+/* Image loading effect */
+.blur-up {
+  filter: blur(8px);
+  transition: filter 0.5s;
+}
+.blur-up[src] {
+  filter: blur(0);
+}
+
