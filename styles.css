@@ -270,3 +270,10 @@ ul.news li {
   filter: blur(0);
 }
 
+/* --- New styles for highlighting conference names --- */
+.conf-short-name {
+  color: #8e24aa; /* Deep purple */
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
