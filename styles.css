@@ -303,7 +303,6 @@ a:link {
 
 /* Styles for when the mouse hovers over a link */
 a:hover {
-  color: #007bff; /* A brighter, more standard web blue to highlight on hover */
   text-decoration: underline; /* Adds an underline specifically on hover */
 }
 
