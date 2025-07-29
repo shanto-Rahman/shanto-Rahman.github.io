@@ -290,3 +290,27 @@ ul.news li {
   letter-spacing: 0.5px;
 }
 
+/* For unvisited links */
+a:link {
+  color: #333; /* Dark grey */
+  text-decoration: none; /* Optional: removes the underline */
+}
+
+/* For visited links */
+a:visited {
+  color: #666; /* Slightly lighter grey for visited */
+  text-decoration: none; /* Optional: removes the underline */
+}
+
+/* For when you hover over the link with your mouse */
+a:hover {
+  color: #000; /* Could make it black on hover, or a different shade of grey */
+  text-decoration: underline; /* Optional: adds an underline on hover for feedback */
+}
+
+/* For when the link is actively being clicked */
+a:active {
+  color: #333; /* Keep it consistent */
+  text-decoration: none; /* Optional: removes the underline */
+}
+
