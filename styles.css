@@ -301,11 +301,6 @@ a:link {
   color: #007bff; /* A darker, more muted blue (steel blue / dark teal-ish) */
 }
 
-/* Styles for visited links */
-a:visited {
-  color: #444; /* A dark grey for visited links - still clear but distinct from unvisited */
-}
-
 /* Styles for when the mouse hovers over a link */
 a:hover {
   color: #007bff; /* A brighter, more standard web blue to highlight on hover */
