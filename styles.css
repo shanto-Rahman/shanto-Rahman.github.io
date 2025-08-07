@@ -273,7 +273,7 @@ ul.news li {
 /* --- New styles for highlighting conference names --- */
 .conf-short-name {
   /*color: #8e24aa; /* Deep purple */
-  color: #8c0808; /* Dark red */
+  color: #de0e0e; /* Dark red */
   font-weight: bold;
   letter-spacing: 0.5px;
 }
@@ -298,7 +298,7 @@ a {
 
 /* Styles for unvisited links */
 a:link {
-  color: #004085;
+  color: rgb(27, 27, 208) /* #1069c9;*/
 }
 
 /* Styles for when the mouse hovers over a link */
@@ -308,5 +308,5 @@ a:hover {
 
 /* Styles for when the link is actively being clicked */
 a:active {
-  color: #002042; /* A slightly darker blue when clicked */
+  color: #34373b; /* A slightly darker blue when clicked */
 }
