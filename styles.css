@@ -314,3 +314,7 @@ a:hover {
 a:active {
   color: #34373b; /* A slightly darker blue when clicked */
 }
+
+nav ul li a {
+  color: #fff;
+}
