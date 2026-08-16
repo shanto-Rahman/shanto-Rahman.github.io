@@ -76,12 +76,10 @@ nav ul li a {
   display: block;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-nav ul li a {
+nav ul li a:hover,
+nav ul li a:active {
   color: #fff;
+  text-decoration: none;
 }
 
 nav ul li a.active {
@@ -315,6 +313,23 @@ a:active {
   color: #34373b; /* A slightly darker blue when clicked */
 }
 
-nav ul li a {
-  color: #fff;
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:hover,
+nav ul li a:active {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+nav ul li a.active,
+nav ul li a.active:link,
+nav ul li a.active:visited,
+nav ul li a.active:hover,
+nav ul li a.active:active {
+  background: #fff;
+  color: #BF5700 !important;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 5px 14px;
 }
