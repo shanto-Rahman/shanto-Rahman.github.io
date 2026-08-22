@@ -11,7 +11,8 @@ body {
 header {
   background: #BF5700; /* ut-austin color */
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 110px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Align items to the left */
@@ -97,6 +98,7 @@ nav ul li a.active {
   header {
     /* On mobile, align header items to left. Nav will be positioned absolutely. */
     justify-content: flex-start; /* Align header items to start */
+    padding: 10px 20px;
   }
 
   header h1 {
@@ -150,9 +152,18 @@ nav ul li a.active {
 /* --- Rest of your existing styles (no changes needed below this line) --- */
 
 .container {
-  max-width: 960px;
+  width: 100%;
+  /* max-width: 960px; */
   margin: 20px auto;
-  padding: 0 20px;
+  padding: 0 110px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
 }
 
 /* Profile section */
@@ -190,7 +201,14 @@ nav ul li a.active {
 }
 
 .profile-info {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.profile-info p {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: justify;
 }
 
 /* Sections and typography */
