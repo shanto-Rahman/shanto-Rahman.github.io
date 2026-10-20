@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching | Shanto Rahman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  >
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        if (typeof initMenuToggle === 'function') {
+          initMenuToggle();
+        }
+      });
+  </script>
+
+  <div class="container">
+    <section id="teaching">
+      <h2>Teaching</h2>
+
+      <h3>University of Texas at Dallas (UT Dallas)</h3>
+      <p><em>Assistant Professor, Department of Computer Science</em> &middot; Aug. 2026 &ndash; Present</p>
+      <ul>
+        <li><a href="https://catalog.utdallas.edu/2024/undergraduate/courses/se4376" target="_blank" rel="noopener">SE 4376</a>: Object-Oriented Design (Fall 2026)</li>
+        <li>Undergraduate Research (RIDE)
+          <p style="margin: 4px 0;">
+            UTD's <strong>RIDE (Research, Inquiry, Design Experience)</strong> program provides an excellent foundation for introducing undergraduates to research in a structured and supportive environment.
+          </p>
+          <ul>
+            <li><strong>RIDE 033:</strong> Trustworthy AI in Software Testing</li>
+            <li><strong>RIDE 041:</strong> Trustworthy AI in Software Engineering</li>
+            <li><strong>RIDE 045:</strong> Trustworthy AI in Quantum Software Engineering</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>University of Texas at Austin (UT Austin)</h3>
+      <p><em>Teaching Assistant, Department of Electrical and Computer Engineering</em> &middot; Jan. 2025 &ndash; May 2025</p>
+      <ul>
+        <li>ECE 422C: Software Design &amp; Implementation II</li>
+      </ul>
+      <p><em>Guest Lecturer, Department of Electrical and Computer Engineering</em> &middot; Sept. 2025</p>
+      <ul>
+        <li>ECE 382V: Software Testing in the Era of Nondeterminism</li>
+      </ul>
+
+      <h3>Bangladesh University of Professionals (BUP)</h3>
+      <p><em>Lecturer, Department of Information and Communication Technology (ICT)</em> &middot; Sept. 2017 &ndash; Jan. 2021</p>
+      <ul>
+        <li>Taught 8 courses:
+          <ul>
+            <li>ICE 2109: Object-Oriented Programming</li>
+            <li>ICE 2201: Data Structures</li>
+            <li>ICE 2203: Database Management System</li>
+            <li>ICE 3101: Analysis and Design of Algorithm</li>
+            <li>ICE 3103: Operating System</li>
+            <li>ICE 3207: Software Engineering</li>
+            <li>ICE 3206: Software Testing</li>
+            <li>ICE 4107: Artificial Intelligence</li>
+          </ul>
+        </li>
+        <li>Supervised undergraduate and graduate students</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <footer style="text-align:center; margin: 40px 0 20px 0; color: #888; font-size: 0.95rem;">
+    &copy; 2025 Shanto Rahman. All rights reserved.
+  </footer>
+</body>
+</html>
