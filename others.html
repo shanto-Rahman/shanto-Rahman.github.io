@@ -5,126 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Shanto Rahman</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- 3) Font-Awesome (so the <i class="fas fa-bars"> actually renders something) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    >
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Scoped to this page to avoid changing the shared site styles. */
+    .service-page { max-width: 960px; margin: 0 auto; }
+    .service-group { margin: 0 0 1.8rem; }
+    .service-group h2 { color: #1976d2; font-size: 1.2rem; margin: 0 0 .6rem; padding-bottom: .3rem; border-bottom: 1px solid #e5e7eb; }
+    .service-group h3 { font-size: 1rem; margin: 1rem 0 .35rem; }
+    .service-group ul { margin: .25rem 0 .65rem; padding-left: 1.4rem; }
+    .service-group li { margin-bottom: .35rem; line-height: 1.55; }
+    .service-group li ul { margin-top: .35rem; }
+    .service-group .year { color: #666; white-space: nowrap; }
+  </style>
+</head>
 <body>
   <div id="header-placeholder"></div>
   <script>
     fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-        if (typeof initMenuToggle === 'function') {
-          initMenuToggle();
-        }
-      });
+      .then(response => {
+        if (!response.ok) throw new Error('Could not load site header');
+        return response.text();
+      })
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        if (typeof initMenuToggle === 'function') initMenuToggle();
+      })
+      .catch(error => console.error(error));
   </script>
-  <div class="container">
-      <section class="others-section" id="services">
-  <!--<h2>Services</h2>-->
-  <ul>
-    <li><span style="font-weight: bold; color: #1976d2; display: inline-block; margin-bottom: 4px;">Reviewer:</span>
-      <ul style="margin-left: 24px;">
-        <li>ICSE, Demo Track, 2026</li>
-        <li>SANER, 2026</li>
-        <li>SANER, Industry Track, 2026</li>
-        <li>Artifact Evaluation@ICSE, 2026</li>
-        <li>FTW@ICSE, 2025</li>
-        <li>Artifact Evaluation@ICSE, 2025</li>
-        <!--<li>icict4sd, 2021</li> -->
-        <li>ACM Transactions on Software Engineering and Methodology (TOSEM), 2025 </li>
-        <li>IEEE Transactions on Software Engineering (TSE), 2024</li>
-        <li>Information and Software Technology, 2024</li>
-        <li>Journal of King Saud University - Computer and Information Sciences, 2023</li>
-      </ul>
-    </li>
 
-    <li><span style="font-weight: bold; color: #1976d2; display: inline-block; margin-bottom: 4px;">Sub-Reviewer:</span>
-      <ul style="margin-left: 24px;">
-        <li>ICSE (2024), FSE (2023, 2024), ASE (2023, 2024), ISSTA (2023, 2025)</li>
-      </ul>
-    </li>
-    <li><span style="font-weight: bold; color: #1976d2;">UT Campus Brand Ambassador</span>, Amazon, 2025</li>
-    <li><span style="font-weight: bold; color: #1976d2;">Co-organizer</span>, Joint UT-Cornell Software Engineering Seminar, 2024</li>
-    <li><span style="font-weight: bold; color: #1976d2;">Judge</span>, Capital of Texas Undergraduate Research Conference, 2023</li>
-    <li><span style="font-weight: bold; color: #1976d2;">Member</span>, Society of Women Engineers, UT Austin, 2021-2025</li>
-    <li><span style="font-weight: bold; color: #1976d2;">Committee Member</span>, Undergraduate Curriculum Review Committee, BUP (Batch 2021)</li>
-    <li><span style="font-weight: bold; color: #1976d2;">House Tutor</span>, Bangladesh University of Professionals, Apr 2020 – Jan 2021</li>
-    <li><span style="font-weight: bold; color: #1976d2; display: inline-block; margin-bottom: 4px;">Student Advisor</span>, Dept. of ICT, BUP, Sept 2017 – Jan 2021
-      <ul style="margin-left: 24px;">
-        <li>Counseling students</li>
-        <li>Student progress monitoring</li>
-      </ul>
-    </li>
+  <main class="container">
+    <section class="others-section service-page" id="services" aria-label="Academic and professional service">
+      <section class="service-group" aria-labelledby="conference-service">
+        <h2 id="conference-service">Conference Organization &amp; Judging</h2>
+        <ul>
+          <li><strong>Poster Co-Chair</strong>, ICSME <span class="year">2027</span></li>
+          <li><strong>Judge</strong>, Student Research Competition (SRC), ASE <span class="year">2026</span></li>
+          <li><strong>Co-organizer</strong>, Joint UT–Cornell Software Engineering Seminar <span class="year">2024</span></li>
+          <li><strong>Judge</strong>, Capital of Texas Undergraduate Research Conference <span class="year">2023</span></li>
+          <li><strong>Judge</strong>, NASA Space Apps Challenge, Dhaka, Bangladesh <span class="year">2019</span>
+            <ul><li>Team Champion, Waste Management category</li></ul>
+          </li>
+        </ul>
+      </section>
 
-    <li><span style="font-weight: bold; color: #1976d2;">Moderator</span>, BUP Infotech Club (BUPITC), 2020 – 2021
-      <ul style="margin-left: 24px;">
-        <li>Arranging Different Programming Workshops</li>
-        <li>Mentored Students in Programming, and the Competitions
-           <ul style="margin-left: 48px;">
-             <li>ACM ICPC </li>
-             <li> National Collegiate Programming Contest (NCPC) </li>
-             <li> National Girls Programming Contest (NGPC)</li>
-             <li> Inter Private University Programming Contest (IPUPC) </li>
-           </ul>
-        </li>
-      </ul>
-    </li>
-    <li><span style="font-weight: bold; color: #1976d2;">Judge</span>, NASA Space Apps Challenge 2019, Dhaka, Bangladesh
-      <ul style="margin-left: 24px;">
-        <li>Team Champion, Waste Management category</li>
-      </ul>
-    </li>
-    <li>ACM Member, 2022-2025</li>
-  </ul>
-</section>
+      <section class="service-group" aria-labelledby="peer-review">
+        <h2 id="peer-review">Peer Review</h2>
+        <h3>Conference and Workshop Reviewer</h3>
+        <ul>
+          <li>ICSE, Demonstrations Track <span class="year">2026</span></li>
+          <li>SANER, Main Conference and Industry Track <span class="year">2026</span></li>
+          <li>ICSE, Artifact Evaluation <span class="year">2025, 2026</span></li>
+          <li>FTW @ ICSE <span class="year">2025</span></li>
+        </ul>
+        <h3>Journal Reviewer</h3>
+        <ul>
+          <li>ACM Transactions on Software Engineering and Methodology (TOSEM) <span class="year">2025</span></li>
+          <li>IEEE Transactions on Software Engineering (TSE) <span class="year">2024</span></li>
+          <li>Information and Software Technology <span class="year">2024</span></li>
+          <li>Journal of King Saud University – Computer and Information Sciences <span class="year">2023</span></li>
+        </ul>
+        <h3>Sub-reviewer</h3>
+        <ul>
+          <li>ICSE <span class="year">2024</span>; FSE <span class="year">2023, 2024</span>; ASE <span class="year">2023, 2024</span>; ISSTA <span class="year">2023, 2025</span></li>
+        </ul>
+      </section>
 
-<!--<section class="others-section" id="Talk">
-  <h2>Talk</h2>
-  <ul>
-    <li>Lightning Talk, GWGMC Research Symposium</li>
-  </ul>
-</section> -->
+      <section class="service-group" aria-labelledby="university-service">
+        <h2 id="university-service">University &amp; Student Service</h2>
+        <ul>
+          <li><strong>Committee Member</strong>, Undergraduate Curriculum Review Committee, Bangladesh University of Professionals (BUP), Batch 2021</li>
+          <li><strong>Student Advisor</strong>, Department of ICT, BUP <span class="year">September 2017 – January 2021</span>
+            <ul><li>Student advising and academic progress monitoring</li></ul>
+          </li>
+          <li><strong>House Tutor</strong>, BUP <span class="year">April 2020 – January 2021</span></li>
+          <li><strong>Moderator</strong>, BUP Infotech Club (BUPITC) <span class="year">2020–2021</span>
+            <ul>
+              <li>Organized programming workshops</li>
+              <li>Mentored students for ACM ICPC, National Collegiate Programming Contest (NCPC), National Girls Programming Contest (NGPC), and Inter Private University Programming Contest (IPUPC)</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-<!--<section class="others-section" id="websites">
-  <h2>Web Development & Apps</h2>
-  <ul class="others-website-list">
-    <li>
-      <strong>Department of Disaster Science and Management, University of Dhaka</strong><br>
-      <a href="#" target="_blank">Visit Website</a><br>
-      <em>Technology: CodeIgniter, MySQL</em>
-    </li>
-    <li>
-      <strong>Shahidullah Hall, University of Dhaka</strong><br>
-      <a href="#" target="_blank">Visit Website</a><br>
-      <em>Technology: PHP, MySQL</em>
-    </li>
-    <li>
-      <strong>PicEdit (Windows Phone App)</strong><br>
-      <a href="#" target="_blank">Visit App</a><br>
-      <em>Technology: C#, .NET</em>
-    </li>
-  </ul>
-</section>-->
+      <section class="service-group" aria-labelledby="community-service">
+        <h2 id="community-service">Professional &amp; Community Engagement</h2>
+        <ul>
+          <li><strong>UT Campus Brand Ambassador</strong>, Amazon <span class="year">2025</span></li>
+          <li><strong>Member</strong>, Society of Women Engineers, UT Austin <span class="year">2021–2025</span></li>
+          <li><strong>Member</strong>, ACM <span class="year">2022–2025</span></li>
+        </ul>
+      </section>
+    </section>
+  </main>
 
-<!--<section class="others-section" id="hobbies">
-  <h2>Hobbies & Competitions</h2>
-  <ul>
-    <li>Playing: I like to play different types of indoor and outdoor games</li>
-    <li>Traveling: Exploring new cultures and places</li>
-    <li>Gaming: 1st Runner-up, Samsung R&D Institute Bangladesh Carrom Tournament, 2016</li>
-  </ul>
-</section>-->
-
-  </div>
   <script src="script.js"></script>
-  <footer style="text-align:center; margin: 40px 0 20px 0; color: #888; font-size: 0.95rem;">
-      &copy; 2025 Shanto Rahman. All rights reserved.
-    </footer>
-  </body>
+  <footer style="text-align:center; margin:40px 0 20px; color:#888; font-size:.95rem;">
+    &copy; 2026 Shanto Rahman. All rights reserved.
+  </footer>
+</body>
 </html>
-
